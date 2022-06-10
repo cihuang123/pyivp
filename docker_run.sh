@@ -31,12 +31,12 @@ docker run \
     -e QT_X11_NO_MITSHM=1 \
     -e XAUTHORITY=$XAUTH \
     -v "$XAUTH:$XAUTH" \
-    -v "/home/$USER/ivp_python:/home/arg/ivp_python" \
+    -v "/home/$USER/pyivp:/home/arg/pyivp" \
     -v "/tmp/.X11-unix:/tmp/.X11-unix" \
     -v "/etc/localtime:/etc/localtime:ro" \
     -v "/dev:/dev" \
     -v "/var/run/docker.sock:/var/run/docker.sock" \
-    -w "/home/arg/ivp_python" \
+    -w "/home/arg/pyivp" \
     --user "root:root" \
     --name oop \
     --network host \
