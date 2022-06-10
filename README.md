@@ -1,4 +1,4 @@
-# IvP Python
+# pyivp (IvP for Python)
 
 This repo is to set up the pybind11 for the IvP libraries in [MOOS-IvP](https://oceanai.mit.edu/ivpman/pmwiki/pmwiki.php)
 
@@ -28,5 +28,21 @@ Parts of the diagram is shown below:
 
 <img width="554" alt="image" src="https://user-images.githubusercontent.com/16217256/171215939-077bd36b-438d-4460-ba8e-20a8521784c4.png">
 
+## pybind11 example
+
+```
+source docker_run.sh
+cd example
+make
+python3 pytest/test.py
+```
+
+You should see:
+
+```
+Made a bike called: Yamaha
+Zoom Zoom on road: mullholland
+```
+without import errors or assert fails
 
 
