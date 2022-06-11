@@ -19,14 +19,14 @@ rand_vertices_seed: rand_vertices_seed.cpp
 	g++ -o rand_vertices_seed.out \
 		rand_vertices_seed.cpp
 
-rand_vertices_class: ../lib_geometry/libgeometry.a rand_vertices_class.cpp
+rand_vertices_class: ../lib_geometry/libcpplabs_geometry.a rand_vertices_class.cpp
 	g++ -I../lib_geometry -L../lib_geometry \
 		-o rand_vertices_class.out \
-		rand_vertices_class.cpp -lgeometry
+		rand_vertices_class.cpp -lcpplabs_geometry
 
-rand_seglist: ../lib_geometry/libgeometry.a rand_seglist.cpp
+rand_seglist: ../lib_geometry/libcpplabs_geometry.a rand_seglist.cpp
 	g++ -I../lib_geometry -L../lib_geometry -o rand_seglist.out \
-		rand_seglist.cpp -lgeometry
+		rand_seglist.cpp -lcpplabs_geometry
 
 clean:
 	rm -f rand_vertices.out rand_vertices_file.out rand_vertices_class.out 
