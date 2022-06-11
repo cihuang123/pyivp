@@ -3,7 +3,7 @@
 
 namespace py = pybind11;
 
-//void init_VertexSimple(py::module &);
+void init_VertexSimple(py::module &);
 
 namespace ivp {
 
@@ -18,6 +18,7 @@ PYBIND11_MODULE(cpplabs, m) {
     m.doc() = "pybind11 for cpp labs";
  
     m.def("python_test_plus", &cpp_test_plus, "plus x and y");
-    //init_VertexSimple(m);
+    
+    init_VertexSimple(m);
 }
 }
