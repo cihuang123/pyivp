@@ -1,13 +1,15 @@
-## Makefile for Lab 06 (Ten Short C++ Labs)                                                                
- # wget http://oceanai.mit.edu/cpplabs/lab06/Makefile                                                      
+all: build-auto tests
 
-all: 
-	cd cpp/; make  
-	cd cpp/tests/; make
-	cd pybind11/; make
+build-auto:
+	make -C cpp
+	make -C cpp/tests
+	make -C pybind11
+
+tests:
+	cd cpp/tests/bin/; ./test_cpp
+	python3 pytest/test.py
 
 clean:
 	rm -rf cpp/build
 	rm -rf cpp/tests/build
 	rm -rf pybind11/build
-#   rm -rf cpp_ivp_src/build

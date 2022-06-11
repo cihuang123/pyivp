@@ -5,7 +5,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 set(PYTHON_LIBRARY_DIR "/usr/lib/python3/dist-packages")
 set(PYTHON_EXECUTABLE "/usr/bin/python3")
-set(IVP_PYTHON_DIR "/home/arg/pyivp")
+# this may require a absolute path
+set(PYBIND11_DIR "/home/arg/pyivp/examples/automobile_example")
 
 if(NOT CMAKE_BUILD_TYPE)
   set(CMAKE_BUILD_TYPE Release)
@@ -19,9 +20,9 @@ project(automobile)
 include_directories("${CMAKE_SOURCE_DIR}/cpp/include/automobile_bits")
 include_directories("${CMAKE_SOURCE_DIR}/python")
 
-file (GLOB SOURCE_FILES "${IVP_PYTHON_DIR}/example/cpp/src/*.cpp")
-file (GLOB HEADER_FILES "${IVP_PYTHON_DIR}/example/cpp/include/automobile_bits/*.hpp")
-file (GLOB PYTHON_FILES "${IVP_PYTHON_DIR}/example/pybind11/*.cpp")
+file (GLOB SOURCE_FILES "${PYBIND11_DIR}/cpp/src/*.cpp")
+file (GLOB HEADER_FILES "${PYBIND11_DIR}/cpp/include/automobile_bits/*.hpp")
+file (GLOB PYTHON_FILES "${PYBIND11_DIR}/pybind11/*.cpp")
 
 
 find_package(pybind11 REQUIRED)
