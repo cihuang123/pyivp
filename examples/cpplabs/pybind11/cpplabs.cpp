@@ -13,9 +13,9 @@ int cpp_test_plus(int x, int y){
     return result;
 }
 
-PYBIND11_MODULE(pyivp, m) {
+PYBIND11_MODULE(cpplabs, m) {
     // Optional docstring
-    m.doc() = "Python IvP library";
+    m.doc() = "pybind11 for cpp labs";
  
     m.def("python_test_plus", &cpp_test_plus, "plus x and y");
     //init_VertexSimple(m);
