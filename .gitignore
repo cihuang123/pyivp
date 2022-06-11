@@ -12,3 +12,5 @@ bin/
 [._]sw[a-p]
 tags
 tags.lock
+
+*.out
