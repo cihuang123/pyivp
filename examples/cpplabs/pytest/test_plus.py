@@ -1,7 +1,7 @@
-import pyivp
+import cpplabs
 
-print(pyivp.__doc__)
+print(cpplabs.__doc__)
 
-result = pyivp.python_test_plus(1, 2)
+result = cpplabs.python_test_plus(1, 2)
 print("Python result x plus y is: ", result)
 assert result == 3
